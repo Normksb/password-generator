@@ -38,12 +38,13 @@ function generatePassword() {
 
   // Get the criteria from the user.
   var passwordLength = prompt('Please define password length')
+
   var useLowercase = confirm("Include lowercase characters?");
   var useUppercase = confirm("Include Uppercase characters?");
   var useNumbers = confirm("Include Numbers?");
   var useSymbols = confirm("Include Symbols?");
 
-  // Concatenate the arrays from which password will be generated.
+  // Build the ASCIIToUseInPassword values based on the user's responses to prompts (using concat)
   if (useLowercase) {
     ASCIIToUseInPassword = ASCIIToUseInPassword.concat(ASCIILowerCaseChars);  
   }
