@@ -36,7 +36,7 @@ var ASCIIToUseInPassword = [];
 
 function generatePassword() {
 
-  // Get the criteria from the user.
+  // Get the password length from the user.
   var passwordLength = prompt('Please define password length')
 
   // check if the password length is within the required 8 to 128 length otherwise cease.
@@ -45,6 +45,7 @@ function generatePassword() {
     return generatePassword();
 }
 
+ // prompt user for characters to include in password
   var useLowercase = confirm("Include lowercase characters?");
   var useUppercase = confirm("Include Uppercase characters?");
   var useNumbers = confirm("Include Numbers?");
