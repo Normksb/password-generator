@@ -39,6 +39,12 @@ function generatePassword() {
   // Get the criteria from the user.
   var passwordLength = prompt('Please define password length')
 
+  // check if the password length is within the required 8 to 128 length otherwise cease.
+  if(passwordLength < 8 || passwordLength > 128){
+    alert('You have to enter a number between 8 and 128');
+    return generatePassword();
+}
+
   var useLowercase = confirm("Include lowercase characters?");
   var useUppercase = confirm("Include Uppercase characters?");
   var useNumbers = confirm("Include Numbers?");
