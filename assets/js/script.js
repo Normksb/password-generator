@@ -33,3 +33,38 @@ var ASCIISymbolChars = arrayFromLowToHigh(33, 47)
 
 // Create empty array. The user input from prompts will be stored here before generating random password.
 var ASCIIToUseInPassword = [];
+
+function generatePassword() {
+
+  // Get the criteria from the user.
+  var passwordLength = prompt('Please define password length')
+  var useLowercase = confirm("Include lowercase characters?");
+  var useUppercase = confirm("Include Uppercase characters?");
+  var useNumbers = confirm("Include Numbers?");
+  var useSymbols = confirm("Include Symbols?");
+
+  // Concatenate the arrays from which password will be generated.
+  if (useLowercase) {
+    ASCIIToUseInPassword = ASCIIToUseInPassword.concat(ASCIILowerCaseChars);  
+  }
+
+  if (useUppercase) {
+    ASCIIToUseInPassword = ASCIIToUseInPassword.concat(ASCIIUpperCaseChars);  
+  }
+
+  if (useNumbers){
+    ASCIIToUseInPassword = ASCIIToUseInPassword.concat(ASCIINumberChars);  
+  }
+
+  if (useSymbols) {
+    ASCIIToUseInPassword = ASCIIToUseInPassword.concat(ASCIISymbolChars);  
+  }
+
+  var passwordCharacters = []
+  for (let i=0; i < passwordLength; i++) {
+      var character = ASCIIToUseInPassword[Math.floor(Math.random() * ASCIIToUseInPassword.length)];
+      passwordCharacters.push(String.fromCharCode(character));
+  }
+
+  return passwordCharacters.join('')
+}
