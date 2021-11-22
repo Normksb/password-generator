@@ -1,3 +1,31 @@
-A password generator using javascript. This allows for the creation of a password using criteria defined by a user with funcionality to include or ignore lowercase, uppercase, number and symbol ASCII characters.
+# Javascript Password Generator
+   
+![Screenshot](https://github.com/Normksb/password-generator/blob/main/assets/images/screenshot.jpg)
+  
+[Here is a link to the deployed app](https://normksb.github.io/password-generator/)
 
-Screenshot of the website may be found here: *./assets/images/screenshot.jpg).
+[Here is a link to the gitHub repo](https://github.com/Normksb/password-generator)  
+
+## Description
+This is a javascript app that generates a random password of a chosen length (but between 8 and 128 characters). The inclusion of lower case, upper case, number and symbol characters is optional.
+
+---
+## Table of Contents
+
+- [Technologies](#technologies)
+- [Questions](#questions)
+
+---
+## Technologies
+
+- HTML
+- CSS
+- Javascript 
+
+---
+
+## Questions
+
+For any questions please contact Norman Bernard.  
+- Email: nksb414@gmail.com
+- Github: [Norman Bernard](https://github.com/Normksb)
